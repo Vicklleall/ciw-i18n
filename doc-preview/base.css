@@ -1,0 +1,129 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  font: 16px/1.35 'Source Han Sans', 思源黑体;
+  color: #000;
+  --c: #000;
+  --cb: #d1d7db;
+  --cbl: #e8ebed;
+  --bg: #fff;
+  --bgl: #ebf5ff;
+  --cbt: #39f;
+  --cbtl: #5af;
+  --cg: #d0d0d0;
+  --cgc: #fff;
+  --cbd: #a0a8b0;
+  --bd: 1px solid #a0a8b0;
+  --cbc: #d1d7db;
+  --cs: #18f;
+  --cbb: #b5deff;
+  --sd: 1px 1px 4px #0008;
+  --kid: url("data:image/svg+xml;utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 21'><path fill='%23b5deff' d='M10 0v1H9v1H8v2H7v3h1v2H7v1H6v1H4v1H0v1h1v1h1v2h1v1h3v1h1v1H6v2h6v-2h-1v-1h-1v-1h1v1h4v1h-1v2h6v-2h-1v-1h-3v-1h1v-2h3v-1h1v-3h3V9h-5V5h1V2h-1V0z'/></svg>");
+}
+body.dark {
+  color: #e0e7ef;
+  --c: #e0e7ef;
+  --cb: #56606a;
+  --cbl: #424c56;
+  --bg: #202428;
+  --bgl: #32383e;
+  --cbt: #42566a;
+  --cbtl: #4c6074;
+  --cg: #3b4045;
+  --cgc: #b0b5ba;
+  --cbd: #89a;
+  --bd: 1px solid #89a;
+  --cbc: #8a99a8;
+  --cs: #5af;
+}
+
+#wrap {
+  position: fixed;
+  inset: 0;
+  min-width: 1440px;
+  min-height: 810px;
+}
+
+#icons {
+  position: fixed;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+pre {
+  margin: 0;
+  font: inherit;
+}
+
+input,
+textarea {
+  outline: none;
+  resize: none;
+  font: inherit;
+  color: inherit;
+  border: var(--bd);
+  transition: border-color 0.2s;
+  background: none;
+}
+input:focus,
+textarea:focus {
+  border-color: #5af;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #808890;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: none;
+}
+*::-webkit-scrollbar-track {
+  background: none;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--cb);
+  border-radius: 4px;
+}
+*::-webkit-scrollbar-button {
+  display: none;
+}
+*::-webkit-scrollbar-corner {
+  display: none;
+}
+
+.link {
+  color: #39f;
+}
+.link:hover {
+  color: #5af;
+}
+
+table {
+  border-collapse: collapse;
+}
+thead {
+  text-align: left;
+}
+th, td {
+  padding: 4px 8px;
+  border: 1px solid var(--cbl);
+}
+thead, tbody>tr:nth-child(even) {
+  background: #77889915;
+}
