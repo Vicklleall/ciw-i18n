@@ -27,12 +27,10 @@
 <h4>经验值计算规则</h4>
   <p>获取途径：</p>
   <table>
-    <thead>
-      <tr><th>通关类型</th><th>获得经验</th></tr>
-    </thead>
     <tbody>
-      <tr><td>游戏分区</td><td>+3/10/20/30/40/60/80</td></tr>
-      <tr><td>关卡分区</td><td>+1</td></tr>
+      <tr><td>通关游戏</td><td>+3/10/20/30/40/60/80</td></tr>
+      <tr><td>通关关卡</td><td>+1</td></tr>
+      <tr><td>评分</td><td>每两次+1</td></tr>
     </tbody>
   </table>
   <p>经验等级对照表：</p>
@@ -57,20 +55,16 @@
       <tr><td>Lv.14</td><td>80</td><td>800</td></tr>
       <tr><td>Lv.15</td><td>100</td><td>900</td></tr>
       <tr><td>Lv.16</td><td>100</td><td>1000</td></tr>
-      <tr><td>Lv.17</td><td>150</td><td>1150</td></tr>
-      <tr><td>Lv.18</td><td>200</td><td>1350</td></tr>
-      <tr><td>Lv.19</td><td>250</td><td>1600</td></tr>
-      <tr><td>Lv.20</td><td>400</td><td>2000</td></tr>
-      <tr><td>Lv.21</td><td>500</td><td>2500</td></tr>
-      <tr><td>Lv.22</td><td>500</td><td>3000</td></tr>
-      <tr><td>Lv.23</td><td>500</td><td>3500</td></tr>
-      <tr><td>Lv.24</td><td>500</td><td>4000</td></tr>
-      <tr><td>Lv.25</td><td>500</td><td>4500</td></tr>
-      <tr><td>Lv.26</td><td>500</td><td>5000</td></tr>
-      <tr><td>Lv.27</td><td>500</td><td>5500</td></tr>
-      <tr><td>Lv.28</td><td>500</td><td>6000</td></tr>
-      <tr><td>Lv.29</td><td>500</td><td>6500</td></tr>
-      <tr><td>Lv.30</td><td>500</td><td>7000</td></tr>
+      <tr><td>Lv.17</td><td>100</td><td>1100</td></tr>
+      <tr><td>Lv.18</td><td>100</td><td>1200</td></tr>
+      <tr><td>Lv.19</td><td>150</td><td>1350</td></tr>
+      <tr><td>Lv.20</td><td>150</td><td>1500</td></tr>
+      <tr><td>Lv.21</td><td>150</td><td>1650</td></tr>
+      <tr><td>Lv.22</td><td>150</td><td>1800</td></tr>
+      <tr><td>Lv.23</td><td>200</td><td>2000</td></tr>
+      <tr><td>Lv.24~34</td><td>200</td><td>4200</td></tr>
+      <tr><td>Lv.35~40</td><td>300</td><td>6000</td></tr>
+      <tr><td>Lv.41~50</td><td>400</td><td>10000</td></tr>
     </tbody>
   </table>
 <h4>用户等级作用</h4>
@@ -78,7 +72,7 @@
     <tbody>
       <tr><td>Lv.01</td><td>可以发表评论</td></tr>
       <tr><td>Lv.02</td><td>可以发布游戏、给游戏评分</td></tr>
-      <tr><td>Lv.06</td><td>可以申请管理员</td></tr>
+      <tr><td>Lv.10</td><td>可以申请管理员</td></tr>
     </tbody>
   </table>
 <h3>创作值</h3>
@@ -86,9 +80,6 @@
 <h4>创作值计算规则</h4>
   <p>创作值初始为 20，上限 100，下限 0，计算规则如下：</p>
   <table>
-    <!--thead>
-      <tr><th>游戏评分</th><th>3经验</th><th>10经验</th><th>20经验</th><th>40经验</th><th>80经验</th></tr>
-    </thead-->
     <tbody>
       <tr><td>游戏评分 ≥ 9.6</td><td>+5</td></tr>
       <tr><td>游戏评分 ≥ 9.0</td><td>+3</td></tr>
@@ -101,17 +92,6 @@
       <tr><td>恶意高难/无解</td><td>-10</td></tr>
       <tr><td>无意义/水</td><td>-10</td></tr>
       <tr><td>违规内容</td><td>-20</td></tr>
-      <!--tr><td>≥ 9.6</td><td>+5</td><td>+7</td><td>+10</td><td>+15</td><td>+20</td></tr>
-      <tr><td>≥ 9.0</td><td>+3</td><td>+5</td><td>+7</td><td>+10</td><td>+15</td></tr>
-      <tr><td>≥ 8.0</td><td>+1</td><td>+3</td><td>+4</td><td>+6</td><td>+8</td></tr>
-      <tr><td>≥ 7.0</td><td>+0</td><td>+1</td><td>+2</td><td>+3</td><td>+4</td></tr>
-      <tr><td>&lt; 5.0</td><td colspan='5'>-2</td></tr>
-      <tr><td>&lt; 4.0</td><td colspan='5'>-4</td></tr>
-      <tr><td>&lt; 3.0</td><td colspan='5'>-7</td></tr>
-      <tr><td>&lt; 2.0</td><td colspan='5'>-10</td></tr>
-      <tr><td>恶意高难/无解</td><td colspan='5'>-10</td></tr>
-      <tr><td>无意义/水</td><td colspan='5'>-10</td></tr>
-      <tr><td>违规内容</td><td colspan='5'>-20</td></tr-->
     </tbody>
   </table>
   <p>注：关卡分区的评分不纳入创作值计算</p>
@@ -148,7 +128,7 @@
     </tbody>
   </table>
 <h3>勋章</h3>
-<h4>完整勋章列表</h4>
+  <p>当用户达成特定条件时可以获得勋章 (勋章的发放会有延迟)，佩戴后可在用户名前显示。以下为完整勋章列表：</p>
   <table>
     <thead>
       <tr><th>勋章</th><th>名称</th><th>说明</th></tr>
@@ -157,7 +137,7 @@
       <tr><td><svg><use href='#-m-code'></use></svg></td><td>开发者</td><td>Cloud I Wanna 开发者</td></tr>
       <tr><td><svg><use href='#-m-admin'></use></svg></td><td>管理员</td><td>Cloud I Wanna 管理员</td></tr>
       <tr><td><svg><use href='#-m-test'></use></svg></td><td>测试员</td><td>Cloud I Wanna 测试员</td></tr>
-      <tr><td><svg><use href='#-m-spk'></use></svg></td><td>高级玩家</td><td>等级达到 16 级 (1000经验) 的玩家</td></tr>
+      <tr><td><svg><use href='#-m-spk'></use></svg></td><td>高级玩家</td><td>等级达到 20 级 (1500经验) 的玩家</td></tr>
       <tr><td><svg><use href='#-m-ciw'></use></svg></td><td>CIW</td><td>旧版 Cloud I Wanna 玩家</td></tr>
     </tbody>
   </table>
@@ -232,7 +212,7 @@
   <p>表达式可用于执行自定义计算，各属性、动作、条件中的灰底输入框均支持表达式输入。表达式可使用鼠标 (不推荐) 或键盘编辑，其键盘输入方式如下：</p>
   <li>使用左右方向键移动输入光标</li>
   <li>输入运算符自动添加括号</li>
-  <li>按下快捷键进行对应内容输入：r - 随机值，m - 数学函数，t - 内置变量，g - 存档变量</li>
+  <li>按下快捷键进行对应内容输入：r - 随机值，m - 数学函数，t - 内置变量，g - 存档变量，h - 房间变量</li>
 <h3>游戏资源</h3>
 <h4>画风库</h4>
 <h4>贴图</h4>
@@ -279,6 +259,33 @@
   </table>
   <p>注意，只有关卡分区会定期清理，游戏分区是不会的哦！</p>
 <h4>导出游戏</h4>
+  <p>Cloud I Wanna 导出游戏目前支持网页游戏和 Windows 独立游戏。网页游戏导出类型为 HTML5 静态网页，其文件结构如下：</p>
+  <pre><svg><use href='#-folder'></use></svg>导出目录
+ ├─<svg><use href='#-folder'></use></svg>data
+ │  ├─<svg><use href='#-folder'></use></svg>font <span class='cm'>游戏字体</span>
+ │  ├─<svg><use href='#-folder'></use></svg>music<span class='cm'>游戏音乐</span>
+ │  ├─<svg><use href='#-folder'></use></svg>sound<span class='cm'>游戏音效</span>
+ │  └─<svg><use href='#-folder'></use></svg>[Game ID] <span class='cm'>独立的游戏数据目录</span>
+ │     ├─<svg><use href='#-file'></use></svg>icon   <span class='cm'>游戏图标</span>
+ │     ├─<svg><use href='#-file'></use></svg>game   <span class='cm'>游戏数据 (json)</span>
+ │     ├─<svg><use href='#-file'></use></svg>texture<span class='cm'>纹理图像 (webp/png)</span>
+ │     └─<svg><use href='#-file'></use></svg>uv     <span class='cm'>纹理uv数据</span>
+ ├─<svg><use href='#-folder'></use></svg>css<span class='cm'>引擎所需CSS文件</span>
+ ├─<svg><use href='#-folder'></use></svg>js <span class='cm'>引擎所需JS文件</span>
+ └─<svg><use href='#-file'></use></svg>index.html<span class='cm'>游戏页面</span></pre>
+  <p>导出网页游戏会为每个游戏单独创建名为游戏ID的数据目录，因此可以将多个游戏导出到同一目录下，通过自定义index.html中的GID变量进行路由。需要注意的是，网页游戏并不能直接双击index.html运行，而是需要部署到静态网页服务器，要在本地调试，可以在导出时勾选“包含本地调试程序”。</p>
+  <p>Windows 独立游戏导出类型为64位可执行程序，其文件结构如下：</p>
+  <pre><svg><use href='#-folder'></use></svg>导出目录
+ ├─<svg><use href='#-folder'></use></svg>data
+ │  ├─<svg><use href='#-folder'></use></svg>font <span class='cm'>游戏字体</span>
+ │  ├─<svg><use href='#-folder'></use></svg>music<span class='cm'>游戏音乐</span>
+ │  ├─<svg><use href='#-folder'></use></svg>sound<span class='cm'>游戏音效</span>
+ │  ├─<svg><use href='#-file'></use></svg>icon   <span class='cm'>游戏图标</span>
+ │  ├─<svg><use href='#-file'></use></svg>game   <span class='cm'>游戏数据</span>
+ │  ├─<svg><use href='#-file'></use></svg>texture<span class='cm'>纹理图像</span>
+ │  └─<svg><use href='#-file'></use></svg>uv     <span class='cm'>纹理uv数据</span>
+ └─<svg><use href='#-file'></use></svg>[Game Name].exe<span class='cm'>可执行程序</span></pre>
+  <p>Windows 独立游戏依赖 Microsoft Edge WebView2 运行环境 (在 Windows 10 及以上版本系统自带)，若提示缺少运行环境，可前往<a class='link' href='https://developer.microsoft.com/zh-cn/microsoft-edge/webview2/' target='_blank'>微软官方</a>下载。</p>
 <h3>制作教程</h3>
 <h3>注意事项</h3>
 <h4>性能优化</h4>
