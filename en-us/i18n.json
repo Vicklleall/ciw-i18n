@@ -779,11 +779,5 @@
   "存档是临时的，不会录像，不会保存": "Saves are temporary and replays are disabled.",
   "服务器有新存档后，第一次按R将回到服务器最新存档，再次按R回到自己本地的存档，按Ctrl+R强制回到服务器最新存档": "Pressing R once will switch to the latest server save, and pressing R again will revert to your local save. Alternatively, you can press Ctrl+R to instantly synchronize to the latest server save.",
   "正在下载音乐文件": "Downloading music files",
-  "正在下载字体文件": "Downloading font files",
-  "Cloud I Wanna 游戏存档": "Cloud I Wanna Save File",
-  "导出游戏存档": "Export Save File",
-  "存档导出失败": "Failed to export save file.",
-  "导入存档已存在": "The save already exists.",
-  "存档导入失败": "Failed to import save data.",
-  "存档读取错误": "Failed to read save file."
+  "正在下载字体文件": "Downloading font files"
 }
