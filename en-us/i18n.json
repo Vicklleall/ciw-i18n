@@ -779,5 +779,6 @@
   "存档是临时的，不会录像，不会保存": "Saves are temporary and replays are disabled.",
   "服务器有新存档后，第一次按R将回到服务器最新存档，再次按R回到自己本地的存档，按Ctrl+R强制回到服务器最新存档": "Pressing R once will switch to the latest server save, and pressing R again will revert to your local save. Alternatively, you can press Ctrl+R to instantly synchronize to the latest server save.",
   "正在下载音乐文件": "Downloading music files",
-  "正在下载字体文件": "Downloading font files"
+  "正在下载字体文件": "Downloading font files",
+  "您的浏览器不支持运行当前游戏，请尝试使用Chromium内核版本≥88的浏览器": "It seems your browser does not support running this game. Please try using a browser with a Chromium version ≥ 88."
 }
