@@ -189,7 +189,7 @@
   <li>过场房间的用途很灵活，可用于读档界面、难度选择、开场动画、游戏ED等</li>
 <h4>图层</h4>
   <p>Cloud I Wanna 游戏引擎共有12个图层，对应深度0~11，图层0在最底层，图层11在最顶层。其中图层7是玩家所在图层；图层10和11可设置为GUI图层，<b>GUI图层物体的绘制相对于游戏窗口位置不变</b>。需要注意的是，由于游戏运行会执行优化，同一层内物体的摆放顺序并不一定会决定最终绘制的前后。</p>
-  <p>在工具栏点击图层按钮可展开图层控制面板，每个图层有3个控制按钮，分别对应“单独显示”、“隐藏”和“锁定”。开启“单独显示”后，其余图层会自动隐藏，处于隐藏或锁定状态下的图层无法进行物体摆放、选中、删除操作。</p>
+  <p>图层控制面板位于房间编辑器下方，每个图层有3个控制按钮，分别对应“单独显示”、“隐藏”和“锁定”。开启“单独显示”后，其余图层会自动隐藏，处于隐藏或锁定状态下的图层无法进行物体摆放、选中、删除操作。</p>
 <h4>运行与调试</h4>
   <p>在编辑器中运行游戏，可以选择从当前房间开始、从头开始、从存档继续三种模式，当选择从当前房间开始时，每次运行存档将被覆盖。在编辑器中运行游戏时，存档是临时的，即离开当前项目后存档失效，因此若要完整地测试存档，请在工具栏[测试]中选择[独立测试]。</p>
   <p>游戏运行中，状态栏会显示当前逻辑帧率、逻辑占用、绘制帧率和绘制占用。不同于 GameMaker，Cloud I Wanna 的逻辑帧与绘制帧是分离的，逻辑部分按照每秒50帧恒定运行，而绘制仅当画面需要更新时才发生。因此正常运行时，逻辑帧率应当恒定在50，而绘制帧率则有可能低于50。逻辑占用和绘制占用是根据帧生成时间和绘制时间计算的估计值，当逻辑占用高于50%时，需要检查物体的逻辑是否正确，并尝试优化；当绘制占用高于50%时，需要减少粒子等特效的数量。</p>
@@ -233,7 +233,37 @@
   <p>表达式可用于执行自定义计算，各属性、动作、条件中的灰底输入框均支持表达式输入。表达式可使用鼠标 (不推荐) 或键盘编辑，其键盘输入方式如下：</p>
   <li>使用左右方向键移动输入光标</li>
   <li>输入运算符自动添加括号</li>
-  <li>按下快捷键进行对应内容输入：r - 随机值，m - 数学函数，t - 内置变量，g - 存档变量，h - 房间变量</li>
+  <li>按下快捷键进行对应内容输入：</li>
+  <table>
+    <thead>
+      <tr><th>快捷键</th><th>输入内容</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>r</td><td>随机值</td></tr>
+      <tr><td>m</td><td>数学函数</td></tr>
+      <tr><td>t</td><td>内置参数：计数器、动作内置参数等</td></tr>
+      <tr><td>v</td><td>变量：存档变量、房间变量</td></tr>
+      <tr><td>o</td><td>物体：物体属性、变量</td></tr>
+      <tr><td>p</td><td>玩家：物体属性、变量</td></tr>
+    </tbody>
+  </table>
+  <p>表达式支持的函数见下表：</p>
+  <table class='code'>
+    <tbody>
+      <tr><td>rand(a, b)</td><td>生成一个a到b之间的随机浮点数，包含a，不包含b</td></tr>
+      <tr><td>randi(a, b)</td><td>生成一个a到b之间的随机整数，包含a和b (a和b都为整数)</td></tr>
+      <tr><td>abs(x)</td><td>返回x的绝对值</td></tr>
+      <tr><td>sign(x)</td><td>返回x的符号，正数返回1，负数返回-1，零返回0</td></tr>
+      <tr><td>floor(x), round(x), ceil(x)</td><td>对进行x向下取整、四舍五入、向上取整</td></tr>
+      <tr><td>snap(x, step)</td><td>将x对齐到步长为step的网格，等价于 floor(x / step) * step</td></tr>
+      <tr><td>sin(x), cos(x), tan(x), asin(x), acos(x), atan(x)</td><td>三角函数与反三角函数，角度制</td></tr>
+      <tr><td>atan2(y, x)</td><td>返回从原点指向 (x, y) 的角度，范围从-180到180</td></tr>
+      <tr><td>exp(x), log(x)</td><td>指数函数与对数函数，以自然常数e为底</td></tr>
+      <tr><td>max(a, b), min(a, b)</td><td>返回a、b中的较大值、较小值</td></tr>
+      <tr><td>clamp(x, a, b)</td><td>将x限制在a和b之间，等价于 min(max(x, a), b)</td></tr>
+      <tr><td>lerp(a, b, t)</td><td>返回a到b之间以t为比例的线性插值，等价于 a * (1 - t) + b * t</td></tr>
+    </tbody>
+  </table>
 <h4>自定义项</h4>
 <h4>滤镜</h4>
 <h3>游戏资源</h3>
@@ -271,19 +301,19 @@
   <p>关卡分区带有临时性质和快餐性质，容易出现低创内容，因此系统会进行定期清理。当一个关卡一段时间都没有通关数据更新时，清理策略如下：</p>
   <table>
     <tbody>
-      <tr><td>评分 ≥ 8.0</td><td>永久保留</td></tr>
+      <tr><td>评分 ≥ 7.5</td><td>永久保留</td></tr>
       <tr><td>评分 ≥ 7.0</td><td>90天无更新</td></tr>
       <tr><td>评分 ≥ 6.0</td><td>30天无更新</td></tr>
       <tr><td>评分 &lt; 6.0</td><td>15天无更新</td></tr>
-      <tr><td>评分 &lt; 4.0</td><td>7天无更新</td></tr>
-      <tr><td>评分 &lt; 2.0</td><td>3天无更新</td></tr>
+      <tr><td>评分 &lt; 5.0</td><td>7天无更新</td></tr>
+      <tr><td>评分 &lt; 3.0</td><td>3天无更新</td></tr>
       <tr><td>无评分</td><td>15天无更新</td></tr>
     </tbody>
   </table>
   <p>注意，只有关卡分区会定期清理，游戏分区是不会的哦！</p>
 <h4>导出游戏</h4>
   <p>Cloud I Wanna 导出游戏目前支持网页游戏和 Windows 独立游戏。网页游戏导出类型为 HTML5 静态网页，其文件结构如下：</p>
-  <pre><svg><use href='#-folder'></use></svg>导出目录
+  <pre class='code'><svg><use href='#-folder'></use></svg>导出目录
  ├─<svg><use href='#-folder'></use></svg>data
  │  ├─<svg><use href='#-folder'></use></svg>font <span class='cm'>游戏字体</span>
  │  ├─<svg><use href='#-folder'></use></svg>music<span class='cm'>游戏音乐</span>
@@ -298,7 +328,7 @@
  └─<svg><use href='#-file'></use></svg>index.html<span class='cm'>游戏页面</span></pre>
   <p>导出网页游戏会为每个游戏单独创建名为游戏ID的数据目录，因此可以将多个游戏导出到同一目录下，通过自定义index.html中的GID变量进行路由。需要注意的是，网页游戏并不能直接双击index.html运行，而是需要部署到静态网页服务器，要在本地调试，可以在导出时勾选“包含本地调试程序”。</p>
   <p>Windows 独立游戏导出类型为64位可执行程序，其文件结构如下：</p>
-  <pre><svg><use href='#-folder'></use></svg>导出目录
+  <pre class='code'><svg><use href='#-folder'></use></svg>导出目录
  ├─<svg><use href='#-folder'></use></svg>data
  │  ├─<svg><use href='#-folder'></use></svg>font <span class='cm'>游戏字体</span>
  │  ├─<svg><use href='#-folder'></use></svg>music<span class='cm'>游戏音乐</span>
