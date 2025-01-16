@@ -231,7 +231,7 @@
 <h3>高级使用</h3>
 <h4>表达式</h4>
   <p>表达式可用于执行自定义计算，各属性、动作、条件中的灰底输入框均支持表达式输入。表达式可使用鼠标 (不推荐) 或键盘编辑，其键盘输入方式如下：</p>
-  <li>使用左右方向键移动输入光标</li>
+  <li>使用左右方向键移动输入光标 (下划线表示当前输入层级，高亮为输入光标位置)</li>
   <li>输入运算符自动添加括号</li>
   <li>按下快捷键进行对应内容输入：</li>
   <table>
@@ -243,8 +243,8 @@
       <tr><td>m</td><td>数学函数</td></tr>
       <tr><td>t</td><td>内置参数：计数器、动作内置参数等</td></tr>
       <tr><td>v</td><td>变量：存档变量、房间变量</td></tr>
-      <tr><td>o</td><td>物体：物体属性、变量</td></tr>
-      <tr><td>p</td><td>玩家：物体属性、变量</td></tr>
+      <tr><td>o</td><td>物体属性</td></tr>
+      <tr><td>p</td><td>玩家属性</td></tr>
     </tbody>
   </table>
   <p>表达式支持的函数见下表：</p>
@@ -256,12 +256,36 @@
       <tr><td>sign(x)</td><td>返回x的符号，正数返回1，负数返回-1，零返回0</td></tr>
       <tr><td>floor(x), round(x), ceil(x)</td><td>对进行x向下取整、四舍五入、向上取整</td></tr>
       <tr><td>snap(x, step)</td><td>将x对齐到步长为step的网格，等价于 floor(x / step) * step</td></tr>
-      <tr><td>sin(x), cos(x), tan(x), asin(x), acos(x), atan(x)</td><td>三角函数与反三角函数，角度制</td></tr>
-      <tr><td>atan2(y, x)</td><td>返回从原点指向 (x, y) 的角度，范围从-180到180</td></tr>
+      <tr><td>sin(x), cos(x), tan(x)</td><td>三角函数，角度制</td></tr>
+      <tr><td>asin(x), acos(x), atan(x), atan2(y, x)</td><td>反三角函数，角度制</td></tr>
       <tr><td>exp(x), log(x)</td><td>指数函数与对数函数，以自然常数e为底</td></tr>
       <tr><td>max(a, b), min(a, b)</td><td>返回a、b中的较大值、较小值</td></tr>
       <tr><td>clamp(x, a, b)</td><td>将x限制在a和b之间，等价于 min(max(x, a), b)</td></tr>
       <tr><td>lerp(a, b, t)</td><td>返回a到b之间以t为比例的线性插值，等价于 a * (1 - t) + b * t</td></tr>
+      <tr><td>distance(dx, dy)</td><td>计算基于相对位置的距离，等价于从原点到(dx,dy)的距离</td></tr>
+      <tr><td>direction(dx, dy)</td><td>计算基于相对位置的方向，等价于从原点到(dx,dy)的方向</td></tr>
+    </tbody>
+  </table>
+  <p>支持访问的物体属性见下表：</p>
+  <table class='code'>
+    <thead>
+      <tr><th>属性名</th><th>缩写</th><th>说明</th><th>备注</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>x</td><td>x</td><td>x坐标</td><td rowspan='5'></td></tr>
+      <tr><td>y</td><td>y</td><td>y坐标</td></tr>
+      <tr><td>scaleX</td><td>scx</td><td>横向缩放比例</td></tr>
+      <tr><td>scaleY</td><td>scy</td><td>纵向缩放比例</td></tr>
+      <tr><td>angle</td><td>ang</td><td>旋转角度</td></tr>
+      <tr><td>speedX</td><td>spdx</td><td>水平速度</td><td rowspan='4'>对于玩家而言，返回的是以玩家自身为参考系下的值</td></tr>
+      <tr><td>speedY</td><td>spdy</td><td>竖直速度</td></tr>
+      <tr><td>speed</td><td>spd</td><td>速度</td></tr>
+      <tr><td>direction</td><td>dir</td><td>方向</td></tr>
+      <tr><td>gravity</td><td>g</td><td>重力</td></tr>
+      <tr><td>gravityDirection</td><td>gdir</td><td>重力方向</td></tr>
+      <tr><td>force</td><td>f</td><td>拉力/阻力</td><td>正数为拉力，始终与运动方向相同；负数为阻力，始终与运动方向相反</td></tr>
+      <!--tr><td>alpha</td><td>a</td><td>透明度</td></tr>
+      <tr><td>imageIndex</td><td>im</td><td>图片索引</td></tr-->
     </tbody>
   </table>
 <h4>自定义项</h4>
