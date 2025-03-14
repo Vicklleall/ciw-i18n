@@ -82,7 +82,7 @@
   "下载更新完成，即将重启应用": "",
   "存档方式": "",
   "自动更新失败": "Failed to update",
-  "，请前往官网下载更新": "",
+  "，请尝试重启或前往官网下载更新": "",
   "等级 Lv.": "Level ",
   "经验": "Exp",
   "通关数": "Clears",
@@ -782,5 +782,6 @@
   "正在下载字体文件": "Downloading font files",
   "您的浏览器不支持运行当前游戏，请尝试使用Chromium内核版本≥88的浏览器": "It seems your browser does not support running this game. Please try using a browser with a Chromium version ≥ 88.",
   "图层控制": "",
-  "合作模式下无法切换存档": "Cannot switch saves in co-op mode."
+  "合作模式下无法切换存档": "Cannot switch saves in co-op mode.",
+  "，请前往官网下载更新": ""
 }
