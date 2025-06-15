@@ -264,6 +264,9 @@
       <tr><td>lerp(a, b, t)</td><td>返回a到b之间以t为比例的线性插值，等价于 a * (1 - t) + b * t</td></tr>
       <tr><td>distance(dx, dy)</td><td>计算基于相对位置的距离，等价于从原点到(dx,dy)的距离</td></tr>
       <tr><td>direction(dx, dy)</td><td>计算基于相对位置的方向，等价于从原点到(dx,dy)的方向</td></tr>
+      <tr><td>rotateX(x, y, a)</td><td>计算向量(x,y)旋转角度a后的x坐标，等价于 cos(a) * x - sin(a) * y</td></tr>
+      <tr><td>rotateY(x, y, a)</td><td>计算向量(x,y)旋转角度a后的y坐标，等价于 sin(a) * x + cos(a) * y</td></tr>
+      <tr><td>perspProj(x或y, z)</td><td>计算点(x,y,z)经过透视投影后对应的x或y坐标，等价于 x * 景深 / (z + 景深)</td></tr>
     </tbody>
   </table>
   <p>支持访问的物体属性见下表：</p>
