@@ -268,6 +268,11 @@
       <tr><td>rotateX(x, y, a)</td><td>计算向量(x,y)旋转角度a后的x坐标，等价于 cos(a) * x - sin(a) * y</td></tr>
       <tr><td>rotateY(x, y, a)</td><td>计算向量(x,y)旋转角度a后的y坐标，等价于 sin(a) * x + cos(a) * y</td></tr>
       <tr><td>perspProj(x或y, z)</td><td>计算点(x,y,z)经过透视投影后对应的x或y坐标，等价于 x * 景深 / (z + 景深)</td></tr>
+      <tr><td>len(数组或物体列表)</td><td>返回数组或物体列表的长度</td></tr>
+      <tr><td>sum(数组)</td><td>计算数组元素的和</td></tr>
+      <tr><td>mean(数组)</td><td>计算数组元素的平均值</td></tr>
+      <tr><td>maxOf(数组)</td><td>返回数组元素的最大值</td></tr>
+      <tr><td>minOf(数组)</td><td>返回数组元素的最小值</td></tr>
     </tbody>
   </table>
   <p>支持访问的物体属性见下表：</p>
@@ -293,6 +298,8 @@
       <tr><td>xStart</td><td>初始x坐标</td></tr>
       <tr><td>yStart</td><td>初始y坐标</td></tr>
       <tr><td>step</td><td>创建后经过帧数</td></tr>
+      <tr><td>group</td><td>加入的组合</td><td>返回物体所在组合的组合物体</td></tr>
+      <tr><td>members</td><td>组合的物体列表</td><td>仅组合物体拥有此属性</td></tr>
     </tbody>
   </table>
 <h4>自定义项</h4>
