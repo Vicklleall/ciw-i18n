@@ -230,11 +230,11 @@
 <h4>相机</h4>
 <h3>高级使用</h3>
 <h4>表达式</h4>
-  <p>表达式可用于执行自定义计算，各属性、动作、条件中的灰底输入框均支持表达式输入。表达式可使用鼠标 (不推荐) 或键盘编辑，其键盘输入方式如下：</p>
+  <p>表达式可用于执行自定义计算，各属性、动作、条件中的灰底输入框均支持表达式输入。表达式键盘输入方式如下：</p>
   <li>使用左右方向键移动输入光标 (下划线表示当前输入层级，高亮为输入光标位置)</li>
-  <li>输入运算符自动添加括号</li>
+  <li>输入运算符将按照层级自动添加括号</li>
   <li>按下快捷键进行对应内容输入：</li>
-  <table>
+  <table class='code'>
     <thead>
       <tr><th>快捷键</th><th>输入内容</th></tr>
     </thead>
@@ -242,9 +242,20 @@
       <tr><td>r</td><td>随机值</td></tr>
       <tr><td>m</td><td>数学函数</td></tr>
       <tr><td>t</td><td>内置参数：计数器、动作内置参数等</td></tr>
-      <tr><td>v</td><td>变量：存档变量、房间变量</td></tr>
+      <tr><td>v</td><td>变量：存档变量、房间变量、局部变量</td></tr>
       <tr><td>o</td><td>物体属性</td></tr>
       <tr><td>p</td><td>玩家属性</td></tr>
+    </tbody>
+  </table>
+  <p>表达式支持的运算符见下表：</p>
+  <table class='code'>
+    <tbody>
+      <tr><td>+ - * /</td><td>加减乘除</td></tr>
+      <tr><td>**</td><td>求幂</td></tr>
+      <tr><td>%</td><td>取余</td></tr>
+      <tr><td>[</td><td>数组访问</td></tr>
+      <tr><td>.</td><td>属性访问</td></tr>
+      <tr><td>,</td><td>参数分隔</td></tr>
     </tbody>
   </table>
   <p>表达式支持的函数见下表：</p>
@@ -268,6 +279,8 @@
       <tr><td>rotateX(x, y, a)</td><td>计算向量(x,y)旋转角度a后的x坐标，等价于 cos(a) * x - sin(a) * y</td></tr>
       <tr><td>rotateY(x, y, a)</td><td>计算向量(x,y)旋转角度a后的y坐标，等价于 sin(a) * x + cos(a) * y</td></tr>
       <tr><td>perspProj(x或y, z)</td><td>计算点(x,y,z)经过透视投影后对应的x或y坐标，等价于 x * 景深 / (z + 景深)</td></tr>
+      <tr><td>toGUIX(x, y), toGUIY(x, y)</td><td>返回房间位置(x,y)转换到GUI坐标系的坐标</td></tr>
+      <tr><td>toRoomX(x, y), toRoomY(x, y)</td><td>返回GUI位置(x,y)转换到房间坐标系的坐标</td></tr>
       <tr><td>len(数组或物体列表)</td><td>返回数组或物体列表的长度</td></tr>
       <tr><td>sum(数组)</td><td>计算数组元素的和</td></tr>
       <tr><td>mean(数组)</td><td>计算数组元素的平均值</td></tr>
