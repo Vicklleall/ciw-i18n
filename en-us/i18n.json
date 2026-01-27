@@ -789,5 +789,7 @@
   "声音": "",
   "相机": "",
   "该存档为联机合作存档，是否要开始合作模式联机？": "This is an online co-op save. Would you like to start Co-op Mode online?",
-  "联机合作": "co-op"
+  "联机合作": "co-op",
+  "禁用垂直同步": "Disable VSync",
+  "渲染后端": "Render Backend"
 }
