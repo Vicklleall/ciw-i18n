@@ -791,5 +791,11 @@
   "该存档为联机合作存档，是否要开始合作模式联机？": "This is an online co-op save. Would you like to start Co-op Mode online?",
   "联机合作": "co-op",
   "禁用垂直同步": "Disable VSync",
-  "渲染后端": "Render Backend"
+  "渲染后端": "Render Backend",
+  "导入存档已存在": "Save already exists.",
+  "存档导入失败": "Failed to import save.",
+  "存档读取错误": "Error reading save file.",
+  "Cloud I Wanna 游戏存档": "Cloud I Wanna Save",
+  "导出游戏存档": "Export save",
+  "存档导出失败": "Failed to export save."
 }
