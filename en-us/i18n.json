@@ -661,7 +661,7 @@
   "恶意言论": "",
   "人身攻击": "",
   "游戏相关设置": "",
-  "联机设置": "",
+  "联机设置": "Settings",
   "您可以更新对该作品的评分：": "",
   "每周仅可修改一次": "",
   "修改成功": "",
@@ -797,5 +797,13 @@
   "存档读取错误": "Error reading save file.",
   "Cloud I Wanna 游戏存档": "Cloud I Wanna Save",
   "导出游戏存档": "Export save",
-  "存档导出失败": "Failed to export save."
+  "存档导出失败": "Failed to export save.",
+  "玩家显示 (按V键切换)": "Player Visibility (V)",
+  "显示玩家和玩家名": "Show Player & Name",
+  "仅显示玩家": "Hide Name",
+  "不显示": "Hide All",
+  "玩家透明度": "Player Opacity",
+  "玩家名透明度": "Name Opacity",
+  "玩家隐藏半径": "Hide Distance",
+  "消息显示 (按M键切换)": "Message Display (M)"
 }
